@@ -13,3 +13,12 @@ rootStyle = render $ do
     display block
     height $ pct 100
     width $ pct 100
+  star # byClass "planetary" ? do
+    position relative
+  star # byClass "intergalactic" ? do
+    position absolute
+    top $ px 200
+    left $ px 300
+    borderRadius (px 100) (px 100) (px 100) (px 100)
+    height $ px 100
+    opacity $ 50
