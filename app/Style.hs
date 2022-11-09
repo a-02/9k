@@ -17,8 +17,9 @@ rootStyle = render $ do
     position relative
   star # byClass "intergalactic" ? do
     position absolute
-    top $ px 200
-    left $ px 300
+    top $ px 500
+    left $ px 360
     borderRadius (px 100) (px 100) (px 100) (px 100)
-    height $ px 100
+    height $ px 70
+    width $ px 100
     opacity $ 50

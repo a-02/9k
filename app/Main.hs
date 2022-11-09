@@ -13,7 +13,7 @@ import Web.Scotty as S
 main :: IO ()
 main = do
   TLIO.writeFile "./root.css" rootStyle
-  S.scotty 80 $ nkvc
+  S.scotty 8000 $ nkvc
 
 nkvc :: ScottyM ()
 nkvc = do
@@ -21,3 +21,4 @@ nkvc = do
   middleware static
   get "/"  (html rootContent)
   get "/sound" (html soundContent)
+  get "/home" (html homeContent)
