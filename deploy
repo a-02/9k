@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Build a static executable.
+nix-build static.nix
+# Push to server.
+scp result/bin/9k root@164.90.138.244:/root/
