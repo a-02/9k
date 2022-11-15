@@ -4,14 +4,14 @@ let
 
   pkgs = nixpkgs.pkgsMusl;
 
-  f = { mkDerivation, base, blaze-html, clay, lib, scotty, text, wai-extra, wai-middleware-static, warp, wai, wai-router }:
+  f = { mkDerivation, base, blaze-html, clay, lib, scotty, text, wai-extra, wai-middleware-static, warp, wai, }:
       mkDerivation {
         pname = "9k";
         version = "0.1.0.0";
         src = ./.;
         isLibrary = false;
         isExecutable = true;
-        executableHaskellDepends = [ base blaze-html clay scotty text wai-extra wai-middleware-static warp wai wai-router ];
+        executableHaskellDepends = [ base blaze-html clay scotty text wai-extra wai-middleware-static warp wai ];
         license = "unknown";
         configureFlags = [
           "--ghc-option=-optl=-static"

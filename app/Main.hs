@@ -14,7 +14,8 @@ import Web.Scotty as S
 main :: IO ()
 main = do
   TLIO.writeFile "./root.css" rootStyle
-  Warp.run 23457 $ S.scottyApp nkvc
+  app <- S.scottyApp nkvc
+  Warp.run 23457 app 
 
 nkvc :: ScottyM ()
 nkvc = do
@@ -23,3 +24,5 @@ nkvc = do
   get "/"  (html rootContent)
   get "/sound" (html soundContent)
   get "/home" (html homeContent)
+  -- 9999, the other webserver! who needs loadbalancing, just spread it across ports
+  get "/9999" (redirect "http://9k.vc:9999")
