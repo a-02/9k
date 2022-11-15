@@ -36,6 +36,9 @@ executable 9k
       blaze-html,
       text,
       wai-extra,
-      wai-middleware-static
+      wai-middleware-static,
+      warp,
+      wai,
+      wai-router
     hs-source-dirs:   app
     default-language: Haskell2010
